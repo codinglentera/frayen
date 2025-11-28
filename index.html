@@ -3,24 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Input Gambar & Video</title>
+    <title>Media Input Sederhana</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>pilih gambar atau video</h1>
+    <header>
+        <h1>Input Video dan Gambar</h1>
+    </header>
     
-    <label for="input gambar">upload video:</label>
-    <input type="file" id="inputgambar" accept="image/*">
+    <main>
+        <section id="image-section">
+            <h2>Gambar (HTML & CSS)</h2>
+            <img id="my-image" src="placeholder.jpg" alt="Contoh Gambar" class="media-element">
+            <p>Gambar di atas ditampilkan menggunakan tag $\text{<img>}$ di HTML.</p>
+        </section>
 
-    <div class="preview-area" id="previewVideo>
-        <p>Pratinjau Video</p>
-     </div>
+        <hr>
 
+        <section id="video-section">
+            <h2>Video (HTML)</h2>
+            <video id="my-video" controls class="media-element">
+                <source src="contoh-video.mp4" type="video/mp4">
+                Browser Anda tidak mendukung tag video.
+            </video>
+        </section>
 
-</div>
+        <hr>
+        
+        <section id="js-control-section">
+            <h2>Kontrol JavaScript</h2>
+            <p>Gunakan tombol ini untuk mengontrol video:</p>
+            <div class="controls">
+                <button id="play-btn">Putar (Play)</button>
+                <button id="pause-btn">Jeda (Pause)</button>
+                <button id="change-img-btn">Ganti Gambar</button>
+            </div>
+        </section>
+    </main>
 
     <script src="script.js"></script>
-    </body>
-    </html>
-
+</body>
+</html>
