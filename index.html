@@ -3,40 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media Input Sederhana</title>
+    <title>Media Kontrol HTML</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Input Video dan Gambar</h1>
+        <h1>Aplikasi Media Sederhana</h1>
     </header>
     
     <main>
-        <section id="image-section">
-            <h2>Gambar (HTML & CSS)</h2>
-            <img id="my-image" src="placeholder.jpg" alt="Contoh Gambar" class="media-element">
-            <p>Gambar di atas ditampilkan menggunakan tag $\text{<img>}$ di HTML.</p>
+        <section class="media-container">
+            <h2>Gambar (Input Statis & Kontrol JS)</h2>
+            <img id="media-image" src="gambar1.jpg" alt="Gambar Awal" class="media-display">
+            <p>Klik tombol di bawah untuk mengganti gambar.</p>
+            <button id="change-img-btn" class="control-btn primary-btn">Ganti Gambar</button>
         </section>
 
         <hr>
 
-        <section id="video-section">
-            <h2>Video (HTML)</h2>
-            <video id="my-video" controls class="media-element">
-                <source src="contoh-video.mp4" type="video/mp4">
-                Browser Anda tidak mendukung tag video.
+        <section class="media-container">
+            <h2>Video (Input HTML & Kontrol JS)</h2>
+            <video id="media-video" poster="thumbnail.jpg" class="media-display">
+                <source src="video-anda.mp4" type="video/mp4">
+                Maaf, browser Anda tidak mendukung elemen video.
             </video>
-        </section>
-
-        <hr>
-        
-        <section id="js-control-section">
-            <h2>Kontrol JavaScript</h2>
-            <p>Gunakan tombol ini untuk mengontrol video:</p>
-            <div class="controls">
-                <button id="play-btn">Putar (Play)</button>
-                <button id="pause-btn">Jeda (Pause)</button>
-                <button id="change-img-btn">Ganti Gambar</button>
+            
+            <div class="controls-group">
+                <button id="play-btn" class="control-btn success-btn">▶️ Putar</button>
+                <button id="pause-btn" class="control-btn warning-btn">⏸️ Jeda</button>
+                <button id="reset-btn" class="control-btn danger-btn">⏮️ Kembali ke Awal</button>
             </div>
         </section>
     </main>
